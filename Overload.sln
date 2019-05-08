@@ -27,9 +27,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overload.Payment.Persistenc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overload.Payment.Domain", "src\Services\Payment\Core\Overload.Payment.Domain\Overload.Payment.Domain.csproj", "{DDE581B4-3217-455B-B93A-235CBFB23201}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overload.Payment.Application", "Overload.Payment.Application\Overload.Payment.Application.csproj", "{9F19953F-219A-4E1C-A6AB-CCC7C80A25E9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overload.Payment.Application", "src\Services\Payment\Core\Overload.Payment.Application\Overload.Payment.Application.csproj", "{87D6698A-2534-4A73-BDDF-FFB04A3FCA0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overload.Payment.Common", "Overload.Payment.Common\Overload.Payment.Common.csproj", "{7BFF09B4-D441-4BFE-8347-3B2964F38207}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overload.Payment.Common", "src\Services\Payment\Common\Overload.Payment.Common\Overload.Payment.Common.csproj", "{BB771C23-3713-429A-88A4-1FDDAFD14655}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,14 +53,14 @@ Global
 		{DDE581B4-3217-455B-B93A-235CBFB23201}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDE581B4-3217-455B-B93A-235CBFB23201}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDE581B4-3217-455B-B93A-235CBFB23201}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9F19953F-219A-4E1C-A6AB-CCC7C80A25E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9F19953F-219A-4E1C-A6AB-CCC7C80A25E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9F19953F-219A-4E1C-A6AB-CCC7C80A25E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9F19953F-219A-4E1C-A6AB-CCC7C80A25E9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7BFF09B4-D441-4BFE-8347-3B2964F38207}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7BFF09B4-D441-4BFE-8347-3B2964F38207}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7BFF09B4-D441-4BFE-8347-3B2964F38207}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7BFF09B4-D441-4BFE-8347-3B2964F38207}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87D6698A-2534-4A73-BDDF-FFB04A3FCA0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87D6698A-2534-4A73-BDDF-FFB04A3FCA0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87D6698A-2534-4A73-BDDF-FFB04A3FCA0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87D6698A-2534-4A73-BDDF-FFB04A3FCA0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB771C23-3713-429A-88A4-1FDDAFD14655}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB771C23-3713-429A-88A4-1FDDAFD14655}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB771C23-3713-429A-88A4-1FDDAFD14655}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB771C23-3713-429A-88A4-1FDDAFD14655}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,8 +77,8 @@ Global
 		{1B14B6B8-5D8F-466D-9063-1741C8D88D67} = {43113B16-D86B-4438-BF2A-481B0051FEFD}
 		{4DCEBD5E-5E7F-46C3-8ADE-30A8A3AEB087} = {43113B16-D86B-4438-BF2A-481B0051FEFD}
 		{DDE581B4-3217-455B-B93A-235CBFB23201} = {108D73BA-D51B-43F2-B3E1-B5E74B897A68}
-		{9F19953F-219A-4E1C-A6AB-CCC7C80A25E9} = {108D73BA-D51B-43F2-B3E1-B5E74B897A68}
-		{7BFF09B4-D441-4BFE-8347-3B2964F38207} = {D2E25859-410F-48DC-BEE6-97E8EFB6937D}
+		{87D6698A-2534-4A73-BDDF-FFB04A3FCA0C} = {108D73BA-D51B-43F2-B3E1-B5E74B897A68}
+		{BB771C23-3713-429A-88A4-1FDDAFD14655} = {D2E25859-410F-48DC-BEE6-97E8EFB6937D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3D935B64-3C85-43E9-8366-859213AC815B}
