@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:5000",
+      "applicationUrl": "http://localhost:5001",
       "sslPort": 0
     }
   },
@@ -17,19 +17,19 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Overload.Payment.Api": {
+    "Overload.Payment.Logging": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/TransactionPayments",
+      "launchUrl": "api/Logging",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "https://localhost:5000"
+      "applicationUrl": "https://localhost:5001"
     },
     "Docker": {
       "commandName": "Docker",
       "launchBrowser": true,
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/api/TransactionPayments"
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/api/Logging"
     }
   }
 }

@@ -4,21 +4,14 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
     <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
-    <UserSecretsId>21526ade-29e6-497c-aace-b971d1c92175</UserSecretsId>
+    <UserSecretsId>5d756a1c-52f1-47db-9a03-05746d5c3158</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MediatR" Version="7.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.0.2105168" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\BuildingBlocks\EventBus\Overload.EventBus.RabbitMQ\Overload.EventBus.RabbitMQ.csproj" />
-    <ProjectReference Include="..\Core\Overload.Payment.Application\Overload.Payment.Application.csproj" />
-    <ProjectReference Include="..\Infrastructure\Overload.Payment.Infrastructure\Overload.Payment.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

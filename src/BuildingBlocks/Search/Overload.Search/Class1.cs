@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Overload.Payment.Application
+namespace Overload.Search
 {
     public class Class1
     {

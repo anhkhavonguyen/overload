@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Framework\Overload.Domain\Overload.Domain.csproj" />
+    <ProjectReference Include="..\..\Common\Overload.Payment.Common\Overload.Payment.Common.csproj" />
+  </ItemGroup>
+
 </Project>

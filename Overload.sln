@@ -21,15 +21,37 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{D2E25859-410F-48DC-BEE6-97E8EFB6937D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overload.Payment.Infrastructure", "src\Services\Payment\Infrastructure\Overload.Payment.Infrastructure\Overload.Payment.Infrastructure.csproj", "{1B14B6B8-5D8F-466D-9063-1741C8D88D67}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Overload.Payment.Infrastructure", "src\Services\Payment\Infrastructure\Overload.Payment.Infrastructure\Overload.Payment.Infrastructure.csproj", "{1B14B6B8-5D8F-466D-9063-1741C8D88D67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overload.Payment.Persistence", "src\Services\Payment\Infrastructure\Overload.Payment.Persistence\Overload.Payment.Persistence.csproj", "{4DCEBD5E-5E7F-46C3-8ADE-30A8A3AEB087}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Overload.Payment.Persistence", "src\Services\Payment\Infrastructure\Overload.Payment.Persistence\Overload.Payment.Persistence.csproj", "{4DCEBD5E-5E7F-46C3-8ADE-30A8A3AEB087}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overload.Payment.Domain", "src\Services\Payment\Core\Overload.Payment.Domain\Overload.Payment.Domain.csproj", "{DDE581B4-3217-455B-B93A-235CBFB23201}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Overload.Payment.Domain", "src\Services\Payment\Core\Overload.Payment.Domain\Overload.Payment.Domain.csproj", "{DDE581B4-3217-455B-B93A-235CBFB23201}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overload.Payment.Application", "src\Services\Payment\Core\Overload.Payment.Application\Overload.Payment.Application.csproj", "{87D6698A-2534-4A73-BDDF-FFB04A3FCA0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Overload.Payment.Application", "src\Services\Payment\Core\Overload.Payment.Application\Overload.Payment.Application.csproj", "{87D6698A-2534-4A73-BDDF-FFB04A3FCA0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overload.Payment.Common", "src\Services\Payment\Common\Overload.Payment.Common\Overload.Payment.Common.csproj", "{BB771C23-3713-429A-88A4-1FDDAFD14655}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Overload.Payment.Common", "src\Services\Payment\Common\Overload.Payment.Common\Overload.Payment.Common.csproj", "{BB771C23-3713-429A-88A4-1FDDAFD14655}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ids", "Ids", "{D76554E4-5F74-4C1C-9274-3EDC637A565A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logging", "Logging", "{2039A32C-5B6F-45D3-AB37-58DA04D0DF5C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EventBus", "EventBus", "{C959B8BF-D29E-431C-9523-CDD7243AF7E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overload.EventBus", "src\BuildingBlocks\EventBus\Overload.EventBus\Overload.EventBus.csproj", "{1AA34A12-A26D-4AA7-940F-46293FADAD4C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logging", "Logging", "{FD0D9AFA-A03F-46CF-82E9-9DD8308C8157}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overload.EventBus.RabbitMQ", "src\BuildingBlocks\EventBus\Overload.EventBus.RabbitMQ\Overload.EventBus.RabbitMQ.csproj", "{461BAE07-EE4A-4E83-89D0-3AE16244CE4B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Search", "Search", "{2807FB40-3EDE-419A-AF16-BA111F16F7ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overload.Logging.SeriLog", "src\BuildingBlocks\Logging\Overload.Logging.SeriLog\Overload.Logging.SeriLog.csproj", "{0F174AB7-0B83-403D-ADA2-71CE31B1823E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overload.Search", "src\BuildingBlocks\Search\Overload.Search\Overload.Search.csproj", "{72E0C4D3-E452-4A4B-85DA-D82CBB411010}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overload.Domain", "src\Framework\Overload.Domain\Overload.Domain.csproj", "{D3FE2F17-B56A-4976-B358-6B54431F88C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overload.Payment.Logging", "src\Services\Logging\Overload.Payment.Logging\Overload.Payment.Logging.csproj", "{50F1C02A-6075-4BD6-AF89-B08BC6BBC946}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +83,30 @@ Global
 		{BB771C23-3713-429A-88A4-1FDDAFD14655}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB771C23-3713-429A-88A4-1FDDAFD14655}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB771C23-3713-429A-88A4-1FDDAFD14655}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AA34A12-A26D-4AA7-940F-46293FADAD4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AA34A12-A26D-4AA7-940F-46293FADAD4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AA34A12-A26D-4AA7-940F-46293FADAD4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AA34A12-A26D-4AA7-940F-46293FADAD4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{461BAE07-EE4A-4E83-89D0-3AE16244CE4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{461BAE07-EE4A-4E83-89D0-3AE16244CE4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{461BAE07-EE4A-4E83-89D0-3AE16244CE4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{461BAE07-EE4A-4E83-89D0-3AE16244CE4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F174AB7-0B83-403D-ADA2-71CE31B1823E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F174AB7-0B83-403D-ADA2-71CE31B1823E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F174AB7-0B83-403D-ADA2-71CE31B1823E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F174AB7-0B83-403D-ADA2-71CE31B1823E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72E0C4D3-E452-4A4B-85DA-D82CBB411010}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72E0C4D3-E452-4A4B-85DA-D82CBB411010}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72E0C4D3-E452-4A4B-85DA-D82CBB411010}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72E0C4D3-E452-4A4B-85DA-D82CBB411010}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3FE2F17-B56A-4976-B358-6B54431F88C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3FE2F17-B56A-4976-B358-6B54431F88C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3FE2F17-B56A-4976-B358-6B54431F88C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3FE2F17-B56A-4976-B358-6B54431F88C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50F1C02A-6075-4BD6-AF89-B08BC6BBC946}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50F1C02A-6075-4BD6-AF89-B08BC6BBC946}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50F1C02A-6075-4BD6-AF89-B08BC6BBC946}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50F1C02A-6075-4BD6-AF89-B08BC6BBC946}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -79,6 +125,17 @@ Global
 		{DDE581B4-3217-455B-B93A-235CBFB23201} = {108D73BA-D51B-43F2-B3E1-B5E74B897A68}
 		{87D6698A-2534-4A73-BDDF-FFB04A3FCA0C} = {108D73BA-D51B-43F2-B3E1-B5E74B897A68}
 		{BB771C23-3713-429A-88A4-1FDDAFD14655} = {D2E25859-410F-48DC-BEE6-97E8EFB6937D}
+		{D76554E4-5F74-4C1C-9274-3EDC637A565A} = {8555F018-9A43-4BA9-8FAC-2129F9C35E54}
+		{2039A32C-5B6F-45D3-AB37-58DA04D0DF5C} = {8555F018-9A43-4BA9-8FAC-2129F9C35E54}
+		{C959B8BF-D29E-431C-9523-CDD7243AF7E8} = {B8866AEA-220E-47FC-ADA5-1678F3ADA0D4}
+		{1AA34A12-A26D-4AA7-940F-46293FADAD4C} = {C959B8BF-D29E-431C-9523-CDD7243AF7E8}
+		{FD0D9AFA-A03F-46CF-82E9-9DD8308C8157} = {B8866AEA-220E-47FC-ADA5-1678F3ADA0D4}
+		{461BAE07-EE4A-4E83-89D0-3AE16244CE4B} = {C959B8BF-D29E-431C-9523-CDD7243AF7E8}
+		{2807FB40-3EDE-419A-AF16-BA111F16F7ED} = {B8866AEA-220E-47FC-ADA5-1678F3ADA0D4}
+		{0F174AB7-0B83-403D-ADA2-71CE31B1823E} = {FD0D9AFA-A03F-46CF-82E9-9DD8308C8157}
+		{72E0C4D3-E452-4A4B-85DA-D82CBB411010} = {2807FB40-3EDE-419A-AF16-BA111F16F7ED}
+		{D3FE2F17-B56A-4976-B358-6B54431F88C2} = {D0EEA19B-0A10-490F-B10C-2269053D9993}
+		{50F1C02A-6075-4BD6-AF89-B08BC6BBC946} = {2039A32C-5B6F-45D3-AB37-58DA04D0DF5C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3D935B64-3C85-43E9-8366-859213AC815B}
