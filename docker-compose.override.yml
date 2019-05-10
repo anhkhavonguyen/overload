@@ -1,0 +1,23 @@
+version: '3.4'
+
+services:
+  rabbitmq:
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  overload.payment.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - SubscriptionClientName=Payment
+      - RabbitMqConfig__EventBusConnection=rabbitmq
+      - RabbitMqConfig__EventBusUserName=guest
+      - RabbitMqConfig__EventBusPassword=guest
+      - RabbitMqConfig__EventBusRetryCount=5
+    ports:
+      - "5000:80"
+
+networks:
+  default:
+    external:
+      name: overload_network

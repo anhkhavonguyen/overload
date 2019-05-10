@@ -1,0 +1,30 @@
+version: '3.4'
+
+services:
+
+  rabbitmq:
+    image: rabbitmq:3.7.8-management-alpine
+    volumes:
+      - overload-rabbitmq:/var/lib/rabbitmq
+    networks:
+      - overload_network
+
+  overload.payment.api:
+    image: ${DOCKER_REGISTRY-}overloadpaymentapi
+    build:
+      context: .
+      dockerfile: src/Services/Payment/Overload.Payment.Api/Dockerfile
+    depends_on:
+      - rabbitmq
+    networks:
+      - overload_network
+
+volumes:
+  overload-rabbitmq:
+
+networks:
+  overload_network:
+
+
+
+

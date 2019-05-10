@@ -4,8 +4,7 @@ using Overload.Payment.Application.TransactionPayments.Queries.GetAllTransaction
 
 namespace Overload.Payment.Api.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
+    [Route("api/TransactionPayments")]
     public class TransactionPaymentsController : BaseController
     {      
         public TransactionPaymentsController()
@@ -15,7 +14,7 @@ namespace Overload.Payment.Api.Controllers
 
         [HttpGet]
         public async Task<IActionResult> Get()
-        {         
+        {
             var result = await Mediator.Send(new GetAllTransactionPaymentQuery());
             return Ok(result);
         }

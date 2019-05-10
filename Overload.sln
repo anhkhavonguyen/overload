@@ -37,21 +37,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logging", "Logging", "{2039
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EventBus", "EventBus", "{C959B8BF-D29E-431C-9523-CDD7243AF7E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overload.EventBus", "src\BuildingBlocks\EventBus\Overload.EventBus\Overload.EventBus.csproj", "{1AA34A12-A26D-4AA7-940F-46293FADAD4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Overload.EventBus", "src\BuildingBlocks\EventBus\Overload.EventBus\Overload.EventBus.csproj", "{1AA34A12-A26D-4AA7-940F-46293FADAD4C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logging", "Logging", "{FD0D9AFA-A03F-46CF-82E9-9DD8308C8157}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overload.EventBus.RabbitMQ", "src\BuildingBlocks\EventBus\Overload.EventBus.RabbitMQ\Overload.EventBus.RabbitMQ.csproj", "{461BAE07-EE4A-4E83-89D0-3AE16244CE4B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Overload.EventBus.RabbitMQ", "src\BuildingBlocks\EventBus\Overload.EventBus.RabbitMQ\Overload.EventBus.RabbitMQ.csproj", "{461BAE07-EE4A-4E83-89D0-3AE16244CE4B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Search", "Search", "{2807FB40-3EDE-419A-AF16-BA111F16F7ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overload.Logging.SeriLog", "src\BuildingBlocks\Logging\Overload.Logging.SeriLog\Overload.Logging.SeriLog.csproj", "{0F174AB7-0B83-403D-ADA2-71CE31B1823E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Overload.Logging.SeriLog", "src\BuildingBlocks\Logging\Overload.Logging.SeriLog\Overload.Logging.SeriLog.csproj", "{0F174AB7-0B83-403D-ADA2-71CE31B1823E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overload.Search", "src\BuildingBlocks\Search\Overload.Search\Overload.Search.csproj", "{72E0C4D3-E452-4A4B-85DA-D82CBB411010}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Overload.Search", "src\BuildingBlocks\Search\Overload.Search\Overload.Search.csproj", "{72E0C4D3-E452-4A4B-85DA-D82CBB411010}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overload.Domain", "src\Framework\Overload.Domain\Overload.Domain.csproj", "{D3FE2F17-B56A-4976-B358-6B54431F88C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Overload.Domain", "src\Framework\Overload.Domain\Overload.Domain.csproj", "{D3FE2F17-B56A-4976-B358-6B54431F88C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overload.Payment.Logging", "src\Services\Logging\Overload.Payment.Logging\Overload.Payment.Logging.csproj", "{50F1C02A-6075-4BD6-AF89-B08BC6BBC946}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Overload.Payment.Logging", "src\Services\Logging\Overload.Payment.Logging\Overload.Payment.Logging.csproj", "{50F1C02A-6075-4BD6-AF89-B08BC6BBC946}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{A5AB0B21-BA22-4F3F-BFDF-152C81D927CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -107,6 +109,10 @@ Global
 		{50F1C02A-6075-4BD6-AF89-B08BC6BBC946}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50F1C02A-6075-4BD6-AF89-B08BC6BBC946}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50F1C02A-6075-4BD6-AF89-B08BC6BBC946}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5AB0B21-BA22-4F3F-BFDF-152C81D927CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5AB0B21-BA22-4F3F-BFDF-152C81D927CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5AB0B21-BA22-4F3F-BFDF-152C81D927CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5AB0B21-BA22-4F3F-BFDF-152C81D927CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
