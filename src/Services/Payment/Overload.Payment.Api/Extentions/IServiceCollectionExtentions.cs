@@ -3,8 +3,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Overload.EventBus;
 using Overload.EventBus.RabbitMQ;
+using Overload.Payment.Application.TransactionPayments.Queries.GetAllTransactionPayments;
 using Overload.Payment.Infrastructure.EventHandlers;
 using RabbitMQ.Client;
+using System.Reflection;
+using MediatR;
 
 namespace Overload.Payment.Api.Extentions
 {
@@ -59,6 +62,13 @@ namespace Overload.Payment.Api.Extentions
 
 
             services.AddTransient<PaymentExecutedHandler>();
+
+            return services;
+        }
+
+        public static IServiceCollection AddCQRS(this IServiceCollection services, IConfiguration configuration)
+        {
+            services.AddMediatR(typeof(GetAllTransactionPaymentQueryHandler).GetTypeInfo().Assembly);
 
             return services;
         }

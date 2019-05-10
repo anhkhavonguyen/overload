@@ -33,8 +33,8 @@ namespace Overload.EventBus.RabbitMQ
             _eventBusRabbitMQConnection = eventBusRabbitMQConnection;
             _logger = logger;
             _retryCount = retryCount;
-            _consumerChannel = CreateConsumerChannel();
             _queueName = queueName;
+            _consumerChannel = CreateConsumerChannel();
             _eventTypes = new List<Type>();
             _handlers = new Dictionary<string, List<Type>>();
         }
@@ -82,6 +82,7 @@ namespace Overload.EventBus.RabbitMQ
         {
             var eventName = typeof(T).Name;
             _eventTypes.Add(typeof(T));
+            _handlers.Add(eventName, new List<Type>());
             _handlers[eventName].Add(typeof(TH));
             DoInternalSubscription(eventName);
         }
@@ -138,7 +139,7 @@ namespace Overload.EventBus.RabbitMQ
                 var eventName = ea.RoutingKey;
                 var message = Encoding.UTF8.GetString(ea.Body);
 
-                await ProcessEvent(eventName, message);
+                // await ProcessEvent(eventName, message);
 
                 channel.BasicAck(ea.DeliveryTag, multiple: false);
             };

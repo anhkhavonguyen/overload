@@ -8,4 +8,9 @@
     <PackageReference Include="MediatR" Version="7.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\BuildingBlocks\EventBus\Overload.EventBus\Overload.EventBus.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\Overload.Payment.Infrastructure\Overload.Payment.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

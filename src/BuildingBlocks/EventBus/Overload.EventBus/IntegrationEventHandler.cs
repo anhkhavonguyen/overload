@@ -6,7 +6,7 @@ namespace Overload.EventBus
     {
         public Task Handle(TEvent @event)
         {
-            throw new System.NotImplementedException();
+            return Task.CompletedTask;
         }
     }
 }
