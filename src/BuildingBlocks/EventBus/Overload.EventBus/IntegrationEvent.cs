@@ -2,7 +2,7 @@
 
 namespace Overload.EventBus
 {
-    public class IntegrationEvent
+    public abstract class IntegrationEvent
     {
         public IntegrationEvent()
         {

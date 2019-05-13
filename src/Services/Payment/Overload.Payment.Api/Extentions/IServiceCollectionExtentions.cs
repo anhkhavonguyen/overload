@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using MediatR;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Overload.EventBus;
@@ -7,7 +8,6 @@ using Overload.Payment.Application.TransactionPayments.Queries.GetAllTransaction
 using Overload.Payment.Infrastructure.EventHandlers;
 using RabbitMQ.Client;
 using System.Reflection;
-using MediatR;
 
 namespace Overload.Payment.Api.Extentions
 {
@@ -57,7 +57,7 @@ namespace Overload.Payment.Api.Extentions
                     retryCount = int.Parse(configuration["RabbitMqConfig:EventBusRetryCount"]);
                 }
 
-                return new EventBusRabbitMQ(rabbitMQPersistentConnection, logger, subscriptionClientName, retryCount);
+                return new EventBusRabbitMQ(rabbitMQPersistentConnection, logger, sp, subscriptionClientName, retryCount);
             });
 
 

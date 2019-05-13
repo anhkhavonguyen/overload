@@ -17,7 +17,7 @@ namespace Overload.EventBus.RabbitMQ
 {
     public class EventBusRabbitMQ : IEventBus, IDisposable
     {
-        const string BROKER_NAME = "overload_event_bus";
+        private const string BROKER_NAME = "overload_event_bus";
 
         private readonly IEventBusRabbitMQConnection _eventBusRabbitMQConnection;
         private readonly ILogger<EventBusRabbitMQ> _logger;
@@ -26,20 +26,23 @@ namespace Overload.EventBus.RabbitMQ
         private string _queueName;
         private readonly int _retryCount;
         private readonly List<Type> _eventTypes;
-        private readonly Dictionary<string, List<Type>> _handlers;
+        private readonly Dictionary<string, Type> _handlers;
+        private readonly IServiceProvider _serviceProvider;
 
-        public EventBusRabbitMQ(IEventBusRabbitMQConnection eventBusRabbitMQConnection, ILogger<EventBusRabbitMQ> logger, string queueName = null, int retryCount = 5)
+        public EventBusRabbitMQ(IEventBusRabbitMQConnection eventBusRabbitMQConnection, ILogger<EventBusRabbitMQ> logger, IServiceProvider serviceProvider, string queueName = null, int retryCount = 5)
         {
             _eventBusRabbitMQConnection = eventBusRabbitMQConnection;
             _logger = logger;
+            _serviceProvider = serviceProvider;
             _retryCount = retryCount;
             _queueName = queueName;
             _consumerChannel = CreateConsumerChannel();
             _eventTypes = new List<Type>();
-            _handlers = new Dictionary<string, List<Type>>();
+            _handlers = new Dictionary<string, Type>();
+
         }
 
-        public async Task PublishAsync<TEvent>(TEvent @event) where TEvent : IntegrationEvent
+        public Task PublishAsync<TEvent>(TEvent @event) where TEvent : IntegrationEvent
         {
             if (!_eventBusRabbitMQConnection.IsConnected)
             {
@@ -57,7 +60,7 @@ namespace Overload.EventBus.RabbitMQ
             {
                 var eventName = @event.GetType().Name;
 
-                channel.ExchangeDeclare(exchange: BROKER_NAME,type: "direct");
+                channel.ExchangeDeclare(exchange: BROKER_NAME, type: "direct");
 
                 var message = JsonConvert.SerializeObject(@event);
                 var body = Encoding.UTF8.GetBytes(message);
@@ -74,6 +77,8 @@ namespace Overload.EventBus.RabbitMQ
                                      body: body);
                 });
             }
+
+            return Task.CompletedTask;
         }
 
         public void Subscribe<T, TH>()
@@ -81,9 +86,10 @@ namespace Overload.EventBus.RabbitMQ
             where TH : IIntegrationEventHandler<T>
         {
             var eventName = typeof(T).Name;
+
             _eventTypes.Add(typeof(T));
-            _handlers.Add(eventName, new List<Type>());
-            _handlers[eventName].Add(typeof(TH));
+            _handlers.Add(eventName, typeof(TH));
+
             DoInternalSubscription(eventName);
         }
 
@@ -124,7 +130,7 @@ namespace Overload.EventBus.RabbitMQ
 
             var channel = _eventBusRabbitMQConnection.CreateModel();
 
-            channel.ExchangeDeclare(exchange: BROKER_NAME,type: "direct");
+            channel.ExchangeDeclare(exchange: BROKER_NAME, type: "direct");
 
             channel.QueueDeclare(queue: _queueName,
                                  durable: true,
@@ -139,7 +145,7 @@ namespace Overload.EventBus.RabbitMQ
                 var eventName = ea.RoutingKey;
                 var message = Encoding.UTF8.GetString(ea.Body);
 
-                // await ProcessEvent(eventName, message);
+                await ProcessEvent(eventName, message);
 
                 channel.BasicAck(ea.DeliveryTag, multiple: false);
             };
@@ -153,11 +159,11 @@ namespace Overload.EventBus.RabbitMQ
 
         private async Task ProcessEvent(string eventName, string message)
         {
-            var eventType = _eventTypes.FirstOrDefault(e=>e.Name == eventName);
-            var integrationEvent = JsonConvert.DeserializeObject(message, eventType);
-            var handler = _handlers[eventName];
+            var eventType = _eventTypes.FirstOrDefault(e => e.Name == eventName);
+            var intergrationEvent = JsonConvert.DeserializeObject(message, eventType);
+            var handler = _serviceProvider.GetService(_handlers[eventName]);
             var concreteType = typeof(IIntegrationEventHandler<>).MakeGenericType(eventType);
-            await(Task)concreteType.GetMethod("Handle").Invoke(handler, new object[] { integrationEvent });
+            await (Task)concreteType.GetMethod("Handle").Invoke(handler, new object[] { intergrationEvent });
         }
     }
 }
