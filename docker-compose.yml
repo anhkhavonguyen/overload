@@ -19,6 +19,16 @@ services:
     networks:
       - overload_network
 
+  overload.logging.api:
+    image: ${DOCKER_REGISTRY-}overloadloggingapi
+    build:
+      context: .
+      dockerfile: src/Services/Logging/Overload.Logging.Api/Dockerfile
+    depends_on:
+      - rabbitmq
+    networks:
+      - overload_network
+
 volumes:
   overload-rabbitmq:
 
