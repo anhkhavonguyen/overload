@@ -23,4 +23,8 @@
     <ProjectReference Include="..\Infrastructure\Overload.Payment.Infrastructure\Overload.Payment.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Filters\" />
+  </ItemGroup>
+
 </Project>

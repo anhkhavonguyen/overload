@@ -2,17 +2,15 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Overload.EventBus;
-using Overload.Payment.Infrastructure.EventHandlers;
-using global::Overload.Payment.Infrastructure.Events;
 
-namespace Overload.Payment.Api.Extentions
+
+namespace Overload.Payment.Logging.Extentions
 {
     public static class IApplicationBuilderExtentions
     {
         public static void ConfigureEventBus(this IApplicationBuilder app, IHostingEnvironment env)
         {
-            var eventBus = app.ApplicationServices.GetRequiredService<IEventBus>();
-            eventBus.Subscribe<LoggingIntergrationEvent, LoggingIntergrationEventHandler>();
+          
         }
     }
 }

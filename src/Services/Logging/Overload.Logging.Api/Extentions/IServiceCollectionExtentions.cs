@@ -1,15 +1,11 @@
-﻿using MediatR;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Overload.EventBus;
 using Overload.EventBus.RabbitMQ;
-using Overload.Payment.Application.TransactionPayments.Queries.GetAllTransactionPayments;
-using Overload.Payment.Infrastructure.EventHandlers;
 using RabbitMQ.Client;
-using System.Reflection;
 
-namespace Overload.Payment.Api.Extentions
+namespace Overload.Logging.Api.Extentions
 {
     public static class IServiceCollectionExtentions
     {
@@ -59,16 +55,6 @@ namespace Overload.Payment.Api.Extentions
 
                 return new EventBusRabbitMQ(rabbitMQPersistentConnection, logger, sp, subscriptionClientName, retryCount);
             });
-
-
-            services.AddTransient<LoggingIntergrationEventHandler>();
-
-            return services;
-        }
-
-        public static IServiceCollection AddCQRS(this IServiceCollection services, IConfiguration configuration)
-        {
-            services.AddMediatR(typeof(GetAllTransactionPaymentQueryHandler).GetTypeInfo().Assembly);
 
             return services;
         }

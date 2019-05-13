@@ -4,14 +4,14 @@ using System.Threading.Tasks;
 
 namespace Overload.Payment.Infrastructure.EventHandlers
 {
-    public class PaymentExecutedHandler : IIntegrationEventHandler<PaymentExecutedEvent>
+    public class LoggingIntergrationEventHandler : IIntegrationEventHandler<LoggingIntergrationEvent>
     {
-        public PaymentExecutedHandler()
+        public LoggingIntergrationEventHandler()
         {
-
+                
         }
 
-        public Task Handle(PaymentExecutedEvent @event)
+        public Task Handle(LoggingIntergrationEvent @event)
         {
             return Task.CompletedTask;
         }

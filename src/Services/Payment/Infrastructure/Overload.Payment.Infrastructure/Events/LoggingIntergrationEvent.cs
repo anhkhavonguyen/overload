@@ -2,7 +2,7 @@
 
 namespace Overload.Payment.Infrastructure.Events
 {
-    public class PaymentExecutedEvent : IntegrationEvent
+    public class LoggingIntergrationEvent: IntegrationEvent
     {
     }
 }

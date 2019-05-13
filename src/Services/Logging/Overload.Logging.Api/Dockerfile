@@ -6,7 +6,7 @@ WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM microsoft/dotnet:2.2-aspnetcore-runtime AS build
+FROM microsoft/dotnet:2.2-sdk AS build
 WORKDIR /src
 COPY ["src/Services/Logging/Overload.Payment.Logging/Overload.Payment.Logging.csproj", "src/Services/Logging/Overload.Payment.Logging/"]
 RUN dotnet restore "src/Services/Logging/Overload.Payment.Logging/Overload.Payment.Logging.csproj"

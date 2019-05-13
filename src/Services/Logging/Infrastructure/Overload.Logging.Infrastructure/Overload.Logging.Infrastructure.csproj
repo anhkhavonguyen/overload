@@ -6,7 +6,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\..\BuildingBlocks\EventBus\Overload.EventBus\Overload.EventBus.csproj" />
-    <ProjectReference Include="..\..\..\Logging\Infrastructure\Overload.Logging.Infrastructure\Overload.Logging.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="EventHandlers\" />
   </ItemGroup>
 
 </Project>

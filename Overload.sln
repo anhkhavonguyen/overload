@@ -51,9 +51,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Overload.Search", "src\Buil
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Overload.Domain", "src\Framework\Overload.Domain\Overload.Domain.csproj", "{D3FE2F17-B56A-4976-B358-6B54431F88C2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Overload.Payment.Logging", "src\Services\Logging\Overload.Payment.Logging\Overload.Payment.Logging.csproj", "{50F1C02A-6075-4BD6-AF89-B08BC6BBC946}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Overload.Logging.Api", "src\Services\Logging\Overload.Logging.Api\Overload.Logging.Api.csproj", "{50F1C02A-6075-4BD6-AF89-B08BC6BBC946}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{A5AB0B21-BA22-4F3F-BFDF-152C81D927CD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{1F5112D8-24BC-4A27-AC24-AD9C2F848FE5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{45C9F7C8-973F-420B-9419-DCB0F4F79F6A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{76CFF42B-169E-4AB5-B5F4-5BA709FEDBD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overload.Logging.Application", "src\Services\Logging\Core\Overload.Logging.Application\Overload.Logging.Application.csproj", "{B0844896-AB52-45C0-8EA0-8090261A2CBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overload.Logging.Domain", "src\Services\Logging\Core\Overload.Logging.Domain\Overload.Logging.Domain.csproj", "{48EB6169-3DA6-4435-A373-7E7E1BAB73F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overload.Logging.Infrastructure", "src\Services\Logging\Infrastructure\Overload.Logging.Infrastructure\Overload.Logging.Infrastructure.csproj", "{2937277D-2C28-4E6E-A09F-D9EA6E0F332D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overload.Logging.Persistence", "src\Services\Logging\Infrastructure\Overload.Logging.Persistence\Overload.Logging.Persistence.csproj", "{D6AAF073-28FC-4E26-ADD5-E87A7B69A63F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -113,6 +127,22 @@ Global
 		{A5AB0B21-BA22-4F3F-BFDF-152C81D927CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5AB0B21-BA22-4F3F-BFDF-152C81D927CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5AB0B21-BA22-4F3F-BFDF-152C81D927CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0844896-AB52-45C0-8EA0-8090261A2CBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0844896-AB52-45C0-8EA0-8090261A2CBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0844896-AB52-45C0-8EA0-8090261A2CBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0844896-AB52-45C0-8EA0-8090261A2CBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48EB6169-3DA6-4435-A373-7E7E1BAB73F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48EB6169-3DA6-4435-A373-7E7E1BAB73F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48EB6169-3DA6-4435-A373-7E7E1BAB73F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48EB6169-3DA6-4435-A373-7E7E1BAB73F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2937277D-2C28-4E6E-A09F-D9EA6E0F332D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2937277D-2C28-4E6E-A09F-D9EA6E0F332D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2937277D-2C28-4E6E-A09F-D9EA6E0F332D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2937277D-2C28-4E6E-A09F-D9EA6E0F332D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6AAF073-28FC-4E26-ADD5-E87A7B69A63F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6AAF073-28FC-4E26-ADD5-E87A7B69A63F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6AAF073-28FC-4E26-ADD5-E87A7B69A63F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6AAF073-28FC-4E26-ADD5-E87A7B69A63F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -142,6 +172,13 @@ Global
 		{72E0C4D3-E452-4A4B-85DA-D82CBB411010} = {2807FB40-3EDE-419A-AF16-BA111F16F7ED}
 		{D3FE2F17-B56A-4976-B358-6B54431F88C2} = {D0EEA19B-0A10-490F-B10C-2269053D9993}
 		{50F1C02A-6075-4BD6-AF89-B08BC6BBC946} = {2039A32C-5B6F-45D3-AB37-58DA04D0DF5C}
+		{1F5112D8-24BC-4A27-AC24-AD9C2F848FE5} = {2039A32C-5B6F-45D3-AB37-58DA04D0DF5C}
+		{45C9F7C8-973F-420B-9419-DCB0F4F79F6A} = {2039A32C-5B6F-45D3-AB37-58DA04D0DF5C}
+		{76CFF42B-169E-4AB5-B5F4-5BA709FEDBD1} = {2039A32C-5B6F-45D3-AB37-58DA04D0DF5C}
+		{B0844896-AB52-45C0-8EA0-8090261A2CBF} = {1F5112D8-24BC-4A27-AC24-AD9C2F848FE5}
+		{48EB6169-3DA6-4435-A373-7E7E1BAB73F2} = {1F5112D8-24BC-4A27-AC24-AD9C2F848FE5}
+		{2937277D-2C28-4E6E-A09F-D9EA6E0F332D} = {45C9F7C8-973F-420B-9419-DCB0F4F79F6A}
+		{D6AAF073-28FC-4E26-ADD5-E87A7B69A63F} = {45C9F7C8-973F-420B-9419-DCB0F4F79F6A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3D935B64-3C85-43E9-8366-859213AC815B}
