@@ -1,0 +1,16 @@
+﻿syntax = "proto3";
+
+package Reporting;
+
+service Reporting {
+  rpc TransactionPayment (TransactionPaymentRequest) returns (TransactionPaymentResponse) {}
+}
+
+message TransactionPaymentRequest {
+  date fromdate = 1;
+  date todate = 1;
+}
+
+message TransactionPaymentResponse {
+  repeat data = 1;
+}

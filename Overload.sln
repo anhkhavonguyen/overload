@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.489
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.452
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{58E72B84-CB11-404C-A703-41D3BAA9E809}"
 EndProject
@@ -61,13 +61,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{76CFF42B-169E-4AB5-B5F4-5BA709FEDBD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overload.Logging.Application", "src\Services\Logging\Core\Overload.Logging.Application\Overload.Logging.Application.csproj", "{B0844896-AB52-45C0-8EA0-8090261A2CBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Overload.Logging.Application", "src\Services\Logging\Core\Overload.Logging.Application\Overload.Logging.Application.csproj", "{B0844896-AB52-45C0-8EA0-8090261A2CBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overload.Logging.Domain", "src\Services\Logging\Core\Overload.Logging.Domain\Overload.Logging.Domain.csproj", "{48EB6169-3DA6-4435-A373-7E7E1BAB73F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Overload.Logging.Domain", "src\Services\Logging\Core\Overload.Logging.Domain\Overload.Logging.Domain.csproj", "{48EB6169-3DA6-4435-A373-7E7E1BAB73F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overload.Logging.Infrastructure", "src\Services\Logging\Infrastructure\Overload.Logging.Infrastructure\Overload.Logging.Infrastructure.csproj", "{2937277D-2C28-4E6E-A09F-D9EA6E0F332D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Overload.Logging.Infrastructure", "src\Services\Logging\Infrastructure\Overload.Logging.Infrastructure\Overload.Logging.Infrastructure.csproj", "{2937277D-2C28-4E6E-A09F-D9EA6E0F332D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overload.Logging.Persistence", "src\Services\Logging\Infrastructure\Overload.Logging.Persistence\Overload.Logging.Persistence.csproj", "{D6AAF073-28FC-4E26-ADD5-E87A7B69A63F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Overload.Logging.Persistence", "src\Services\Logging\Infrastructure\Overload.Logging.Persistence\Overload.Logging.Persistence.csproj", "{D6AAF073-28FC-4E26-ADD5-E87A7B69A63F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reporting", "Reporting", "{EAD9EC6A-9FB7-4F7E-85C1-81C29BC767E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overload.Reporting.Service", "src\Services\Reporting\Overload.Reporting.Service\Overload.Reporting.Service.csproj", "{4FF355DC-1894-4868-9988-9D81EBE3E56C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -143,6 +147,10 @@ Global
 		{D6AAF073-28FC-4E26-ADD5-E87A7B69A63F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6AAF073-28FC-4E26-ADD5-E87A7B69A63F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6AAF073-28FC-4E26-ADD5-E87A7B69A63F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FF355DC-1894-4868-9988-9D81EBE3E56C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FF355DC-1894-4868-9988-9D81EBE3E56C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FF355DC-1894-4868-9988-9D81EBE3E56C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FF355DC-1894-4868-9988-9D81EBE3E56C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -179,6 +187,8 @@ Global
 		{48EB6169-3DA6-4435-A373-7E7E1BAB73F2} = {1F5112D8-24BC-4A27-AC24-AD9C2F848FE5}
 		{2937277D-2C28-4E6E-A09F-D9EA6E0F332D} = {45C9F7C8-973F-420B-9419-DCB0F4F79F6A}
 		{D6AAF073-28FC-4E26-ADD5-E87A7B69A63F} = {45C9F7C8-973F-420B-9419-DCB0F4F79F6A}
+		{EAD9EC6A-9FB7-4F7E-85C1-81C29BC767E0} = {8555F018-9A43-4BA9-8FAC-2129F9C35E54}
+		{4FF355DC-1894-4868-9988-9D81EBE3E56C} = {EAD9EC6A-9FB7-4F7E-85C1-81C29BC767E0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3D935B64-3C85-43E9-8366-859213AC815B}
