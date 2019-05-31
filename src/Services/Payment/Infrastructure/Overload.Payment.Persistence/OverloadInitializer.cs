@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Overload.Payment.Persistence
 {
-    class DiggimyntInitializer
+    public class OverloadInitializer
     {
     }
 }

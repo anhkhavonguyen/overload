@@ -2,7 +2,7 @@
 
 namespace Overload.Payment.Persistence
 {
-    public class DiggimyntDbContext : DbContext
+    public class OverloadDbContext : DbContext
     {
     }
 }

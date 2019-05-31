@@ -1,16 +1,24 @@
 ﻿syntax = "proto3";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/wrappers.proto";
 
-package Reporting;
+package Overload.Reporting;
 
 service Reporting {
   rpc TransactionPayment (TransactionPaymentRequest) returns (TransactionPaymentResponse) {}
 }
 
 message TransactionPaymentRequest {
-  date fromdate = 1;
-  date todate = 1;
+  google.protobuf.Timestamp FromDate = 1;
+  google.protobuf.Timestamp ToDate = 2;
 }
 
 message TransactionPaymentResponse {
-  repeat data = 1;
+  repeated TransactionModel Data = 1;
+}
+
+message TransactionModel{
+ string Id = 1;
+ uint32 CurrentBalance = 2;
+ google.protobuf.Timestamp DateCreated =3;
 }
