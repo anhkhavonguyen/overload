@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Overload.EventBus;
-using global::Overload.Logging.Infrastructure.Events;
 using System.Threading.Tasks;
+using global::Overload.Logging.Infrastructure.Events;
 
 namespace Overload.Payment.Logging.Controllers
 {
