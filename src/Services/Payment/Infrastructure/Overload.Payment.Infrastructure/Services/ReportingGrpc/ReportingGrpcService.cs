@@ -9,15 +9,13 @@ namespace Overload.Payment.Infrastructure.Services.ReportingGrpc
 
         public ReportingGrpcService(string host) : base(host)
         {
-
+            _client = new Reporting.Reporting.ReportingClient(this._channel);
         }
 
-        public Task ExecuteAsync()
+        public async Task ExecuteAsync()
         {
             var request = new TransactionRequest();
-            var reply = _client.TransactionAsync(request);
-
-            return Task.CompletedTask;
+            var reply = await _client.TransactionAsync(request);
         }
 
         public Task<object> PrepareData()

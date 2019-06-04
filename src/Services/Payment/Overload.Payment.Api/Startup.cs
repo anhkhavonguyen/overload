@@ -36,7 +36,7 @@ namespace Overload.Payment.Api
 
             services.AddTransient<IReportingGrpcService>(sp =>
             {
-                return new ReportingGrpcService("hostUrl");
+                return new ReportingGrpcService("http://localhost:9009");
             });
         }
 
