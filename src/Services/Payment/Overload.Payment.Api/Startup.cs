@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Overload.Payment.Api.Extentions;
+using Overload.Payment.Infrastructure.Services.ReportingGrpc;
 
 namespace Overload.Payment.Api
 {
@@ -31,6 +32,11 @@ namespace Overload.Payment.Api
                     builder => builder.AllowAnyOrigin()
                     .AllowAnyMethod()
                     .AllowAnyHeader());
+            });
+
+            services.AddTransient<IReportingGrpcService>(sp =>
+            {
+                return new ReportingGrpcService("hostUrl");
             });
         }
 

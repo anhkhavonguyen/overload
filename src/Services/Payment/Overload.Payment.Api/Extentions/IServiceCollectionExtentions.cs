@@ -4,7 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Overload.EventBus;
 using Overload.EventBus.RabbitMQ;
-using Overload.Payment.Application.TransactionPayments.Queries.GetAllTransactionPayments;
+using Overload.Payment.Application.TransactionPayments.Queries.GetTransactions;
 using Overload.Payment.Infrastructure.EventHandlers;
 using RabbitMQ.Client;
 using System.Reflection;
@@ -68,7 +68,7 @@ namespace Overload.Payment.Api.Extentions
 
         public static IServiceCollection AddCQRS(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddMediatR(typeof(GetAllTransactionPaymentQueryHandler).GetTypeInfo().Assembly);
+            services.AddMediatR(typeof(GetTransactionsQueryHandler).GetTypeInfo().Assembly);
 
             return services;
         }

@@ -5,18 +5,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Google.Protobuf" Version="3.8.0" />
+    <Protobuf Include="Protos\reporting.proto" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.7.0" />
     <PackageReference Include="Grpc.Core" Version="1.21.0" />
     <PackageReference Include="Grpc.Tools" Version="1.21.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\BuildingBlocks\EventBus\Overload.EventBus\Overload.EventBus.csproj" />
-    <ProjectReference Include="..\..\..\..\Framework\Overload.Proto\Overload.Proto.csproj" />
-    <ProjectReference Include="..\..\..\Logging\Infrastructure\Overload.Logging.Infrastructure\Overload.Logging.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

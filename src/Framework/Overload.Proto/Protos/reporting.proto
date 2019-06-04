@@ -5,15 +5,15 @@ import "google/protobuf/wrappers.proto";
 package Overload.Reporting;
 
 service Reporting {
-  rpc TransactionPayment (TransactionPaymentRequest) returns (TransactionPaymentResponse) {}
+  rpc Transaction (TransactionRequest) returns (TransactionResponse) {}
 }
 
-message TransactionPaymentRequest {
+message TransactionRequest {
   google.protobuf.Timestamp FromDate = 1;
   google.protobuf.Timestamp ToDate = 2;
 }
 
-message TransactionPaymentResponse {
+message TransactionResponse {
   repeated TransactionModel Data = 1;
 }
 

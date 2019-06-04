@@ -5,9 +5,9 @@ namespace Overload.Reporting.Service.Services
 {
     public class ReportingService : Reporting.ReportingBase
     {
-        public override Task<TransactionPaymentResponse> TransactionPayment(TransactionPaymentRequest request, ServerCallContext context)
+        public override Task<TransactionResponse> Transaction(TransactionRequest request, ServerCallContext context)
         {
-            return base.TransactionPayment(request, context);
+            return base.Transaction(request, context);
         }
     }
 }
