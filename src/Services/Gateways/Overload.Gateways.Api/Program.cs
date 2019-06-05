@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Ocelot.DependencyInjection;
+using Ocelot.Middleware;
 
 namespace Overload.Gateways.Api
 {
@@ -25,6 +26,11 @@ namespace Overload.Gateways.Api
                 })
                 .ConfigureServices((config) => {
                     config.AddOcelot();
+                })
+                .UseIISIntegration()
+                .Configure(app =>
+                {
+                    app.UseOcelot().Wait();
                 })
                 .UseStartup<Startup>();
     }

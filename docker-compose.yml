@@ -29,6 +29,30 @@ services:
     networks:
       - overload_network
 
+  overload.ids.api:
+    image: ${DOCKER_REGISTRY-}overloadids
+    build:
+      context: .
+      dockerfile: src/Services/Ids/Overload.Ids/Dockerfile
+    networks:
+      - overload_network
+
+  overload.gateway.api:
+    image: ${DOCKER_REGISTRY-}overloadgateway
+    build:
+      context: .
+      dockerfile: src/Services/Gateways/Overload.Gateways.Api/Dockerfile
+    networks:
+      - overload_network
+
+  overload.reporting.api:
+    image: ${DOCKER_REGISTRY-}overloadreporting
+    build:
+      context: .
+      dockerfile: src/Services/Reporting/Overload.Reporting.Service/Dockerfile
+    networks:
+      - overload_network
+
 volumes:
   overload-rabbitmq:
 

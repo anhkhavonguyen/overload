@@ -39,7 +39,6 @@ namespace Overload.Gateways.Api
                 builder.AllowAnyOrigin();
                 builder.AllowCredentials();
             });
-            app.UseOcelot().Wait();
             app.UseMvc();
         }
     }

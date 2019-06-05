@@ -15,7 +15,7 @@ services:
       - RabbitMqConfig__EventBusPassword=guest
       - RabbitMqConfig__EventBusRetryCount=5
     ports:
-      - "5000:80"
+      - "7000:80"
 
   overload.logging.api:
     environment:
@@ -26,7 +26,30 @@ services:
       - RabbitMqConfig__EventBusPassword=guest
       - RabbitMqConfig__EventBusRetryCount=5
     ports:
-      - "5001:80"
+      - "7001:80"
+
+  overload.ids.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - SubscriptionClientName=UserIntergration
+      - RabbitMqConfig__EventBusConnection=rabbitmq
+      - RabbitMqConfig__EventBusUserName=guest
+      - RabbitMqConfig__EventBusPassword=guest
+      - RabbitMqConfig__EventBusRetryCount=5
+    ports:
+      - "7003:80"
+
+  overload.gateway.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "7002:80"
+
+  overload.reporting.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "9009:80"
 
 networks:
   default:
