@@ -17,6 +17,7 @@
     <ProjectReference Include="..\..\..\..\BuildingBlocks\EventBus\Overload.EventBus\Overload.EventBus.csproj" />
     <ProjectReference Include="..\..\..\..\Framework\Overload.Proto\Overload.Proto.csproj" />
     <ProjectReference Include="..\..\..\Logging\Infrastructure\Overload.Logging.Infrastructure\Overload.Logging.Infrastructure.csproj" />
+    <ProjectReference Include="..\Overload.Payment.Persistence\Overload.Payment.Persistence.csproj" />
   </ItemGroup>
 
 </Project>
