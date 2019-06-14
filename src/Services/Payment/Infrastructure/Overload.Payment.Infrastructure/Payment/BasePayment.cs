@@ -1,6 +1,5 @@
 ﻿namespace Overload.Payment.Infrastructure.Payment
 {
-    //Abstract Factory
     public abstract class BasePayment
     {
         public BasePayment()

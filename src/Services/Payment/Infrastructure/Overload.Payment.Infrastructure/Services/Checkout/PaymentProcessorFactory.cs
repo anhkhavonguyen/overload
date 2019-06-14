@@ -7,31 +7,22 @@ namespace Overload.Payment.Infrastructure.Services.Checkout
     //Abstract Factory
     public class PaymentProcessorFactory : IPaymentProcessorFactory
     {
-        private readonly ICashPayment _cashPayment;
-        private readonly ICreditPayment _creditPayment;
-        public PaymentProcessorFactory(ICashPayment cashPayment, ICreditPayment creditPayment)
+        public PaymentProcessorFactory()
         {
-            _cashPayment = cashPayment;
-            _creditPayment = creditPayment;
         }
 
-        public Task Process(string method)
+        public Task Process(string method,decimal amount)
         {
-            var tevent = new PaymentCreatedEvent();
-
+            var tEvent = new PaymentCreatedEvent();
             switch (method)
             {
                 case "Cash":
-                    //BasePayment payment = new CashFactory();
-                    //payment.Execute(tevent);
-
-                    _cashPayment.Process(tevent);
+                    BasePayment cashPayment = new CashPayment();
+                    cashPayment.Execute(tEvent);
                     break;
                 case "Credit":
-                    //BasePayment payment = new CreditFactory();
-                    //payment.Execute(tevent);
-
-                    _creditPayment.Process(tevent);
+                    BasePayment creditPayment = new CreditPayment();
+                    creditPayment.Execute(tEvent);
                     break;
             }
             return Task.CompletedTask;

@@ -18,15 +18,5 @@ namespace Overload.Payment.Infrastructure.Payment
         {
             return Task.CompletedTask;
         }
-
-        public Task ProcessFail()
-        {
-            return Task.CompletedTask;
-        }
-
-        public Task ProcessSuccessful()
-        {
-            return Task.CompletedTask;
-        }
     }
 }

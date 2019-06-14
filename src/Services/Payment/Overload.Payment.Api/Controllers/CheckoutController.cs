@@ -8,17 +8,17 @@ namespace Overload.Payment.Api.Controllers
     [ApiController]
     public class CheckoutController : BaseController
     {
-        private readonly PaymentProcessorFactory _paymentProcessor;
-        public CheckoutController(PaymentProcessorFactory paymentProcessor)
+        private readonly IPaymentProcessorFactory _paymentProcessor;
+        public CheckoutController(IPaymentProcessorFactory paymentProcessor)
         {
             _paymentProcessor = paymentProcessor;
         }
 
         [HttpPost]
-        public async Task<IActionResult> Checkout(string method)
+        public async Task<IActionResult> Checkout(string method, decimal amount)
         {
             //Client
-            await _paymentProcessor.Process(method);
+            await _paymentProcessor.Process(method, amount);
             return Ok();
         }
     }

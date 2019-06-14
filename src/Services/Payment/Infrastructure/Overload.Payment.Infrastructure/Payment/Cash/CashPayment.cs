@@ -7,10 +7,8 @@ namespace Overload.Payment.Infrastructure.Payment
     public class CashPayment : BasePayment, ICashPayment
     {
         private CashPaymentExecutor executor;
-        private readonly OverloadDbContext _dbContext;
         public CashPayment()
         {
-            //_dbContext = dbContext;
         }
 
         public override void Execute(dynamic TEvent)
@@ -21,22 +19,11 @@ namespace Overload.Payment.Infrastructure.Payment
             }
 
             executor.Execute();
-            //TODO: Save Changes Db
         }
 
         public Task Process(dynamic TEvent)
         {
-            return Task.CompletedTask;
-        }
-
-        public Task ProcessFail()
-        {
-            return Task.CompletedTask;
-        }
-
-        public Task ProcessSuccessful()
-        {
-            return Task.CompletedTask;
+            throw new System.NotImplementedException();
         }
     }
 }
